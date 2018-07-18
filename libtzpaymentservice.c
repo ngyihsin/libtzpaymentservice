@@ -1,21 +1,3 @@
-/*
- *  sync_test.c
- *
- *   Copyright 2012 Google, Inc
- *
- *  Licensed under the Apache License, Version 2.0 (the "License");
- *  you may not use this file except in compliance with the License.
- *  You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- *  Unless required by applicable law or agreed to in writing, software
- *  distributed under the License is distributed on an "AS IS" BASIS,
- *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- *  See the License for the specific language governing permissions and
- *  limitations under the License.
- */
-
 #include <errno.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -40,7 +22,7 @@
  */
 int tz_payment_service_start_session ()
 {
-  LOG_DEBUG("@@@@@@@@@@@@");
+  LOG_DEBUG("Create a new session");
   return 1;
 }
 
@@ -52,7 +34,7 @@ int tz_payment_service_start_session ()
  */
 int tz_payment_service_abort_session (int session_id)
 {
-  LOG_DEBUG("@@@@@@@@@@@@");
+  LOG_DEBUG("Abort the session with session_id");
   return 0;
 }
 
@@ -63,7 +45,7 @@ int tz_payment_service_abort_session (int session_id)
  */
 int tz_payment_service_stop_session (int session_id)
 {
-    LOG_DEBUG("@@@@@@@@@@@@");
+    LOG_DEBUG("Stop the session with session_id");
     return 0;
 }
 
@@ -79,7 +61,7 @@ int tz_payment_service_stop_session (int session_id)
 int tz_payment_service_invoke_usecase (int session_id, int usecase_id,
                      void *buffer, int length)
 {
-  LOG_DEBUG("@@@@@@@@@@@@");
+  LOG_DEBUG("Invoke a usecase");
   char* p = (char *)buffer;
   int i;
   for (i = 0; i < length; i++) {
@@ -99,6 +81,6 @@ int tz_payment_service_invoke_usecase (int session_id, int usecase_id,
  */
 int provision_secure_indicators(void)
 {
-  LOG_DEBUG("@@@@@@@@@@@@");
+  LOG_DEBUG("Setup provision secure UI indicators");
   return 0;
 }
